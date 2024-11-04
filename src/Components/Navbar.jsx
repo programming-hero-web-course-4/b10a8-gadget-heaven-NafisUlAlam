@@ -36,6 +36,9 @@ const Navbar = ({ cart, wish }) => {
             <li>
               <NavLink to={"/dashboard"}>Dashboard</NavLink>
             </li>
+            <li>
+              <NavLink to={"/news"}>Latest News</NavLink>
+            </li>
           </ul>
         </div>
         <Link to={"/"} className="font-bold text-xl">
@@ -52,6 +55,9 @@ const Navbar = ({ cart, wish }) => {
           </li>
           <li>
             <NavLink to={"/dashboard"}>Dashboard</NavLink>
+          </li>
+          <li>
+            <NavLink to={"/news"}>Latest News</NavLink>
           </li>
         </ul>
       </div>

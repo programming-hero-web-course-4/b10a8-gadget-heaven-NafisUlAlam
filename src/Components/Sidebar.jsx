@@ -5,13 +5,14 @@ const Sidebar = () => {
   //console.log(categeories);
   return (
     <div className="flex flex-col gap-4">
-      {categeories.map((category) => (
-        <NavLink key={category.id} to={`/category/${category.name}`}>
-          <button className="btn px-4 py-2 rounded-full">
-            {category.name}
-          </button>
-        </NavLink>
-      ))}
+      {categeories &&
+        categeories.map((category) => (
+          <NavLink key={category.id} to={`/category/${category.name}`}>
+            <button className="btn px-4 py-2 rounded-full">
+              {category.name}
+            </button>
+          </NavLink>
+        ))}
     </div>
   );
 };

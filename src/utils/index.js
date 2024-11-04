@@ -26,5 +26,5 @@ export const addToStorage = (str, product) => {
   storage.push(product);
   if (str === "w") localStorage.setItem("wishlist", JSON.stringify(storage));
   else localStorage.setItem("cart", JSON.stringify(storage));
-  toast.success("successfully added!");
+  toast.success(`successfully added to ${str === "w" ? "Wishlist" : "Cart"}!`);
 };

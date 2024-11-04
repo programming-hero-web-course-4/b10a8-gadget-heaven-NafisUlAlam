@@ -5,15 +5,17 @@ import Statistics from "../Pages/Statistics";
 import Dashboard from "../Pages/Dashboard";
 import Products from "../Components/Products";
 import ProductDetails from "../Pages/ProductDetails";
-import CartItem from "../Components/CartItems";
+
 import CartItems from "../Components/CartItems";
 import WishItems from "../Components/WishItems";
+import ErrorPage from "../Components/ErrorPage";
+import News from "../Pages/News";
 
 const routes = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-    errorElement: <p>Nothing to see</p>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -42,6 +44,10 @@ const routes = createBrowserRouter([
         element: <Statistics></Statistics>,
       },
       {
+        path: "/news",
+        element: <News></News>,
+      },
+      {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
         children: [
@@ -52,6 +58,10 @@ const routes = createBrowserRouter([
           {
             path: "wishlist",
             element: <WishItems></WishItems>,
+          },
+          {
+            path: "",
+            element: <CartItems></CartItems>,
           },
         ],
       },
