@@ -42,10 +42,10 @@ const ProductDetails = () => {
   return (
     <div>
       <div className="bg-[#9538E2] lg:pb-40 lg:pt-12">
-        <h2 className="text-center text-white font-bold text-lg md:text-xl lg:text-3xl">
+        <h2 className="text-center text-white font-bold text-lg md:text-xl lg:text-3xl mb-4">
           Product Details
         </h2>
-        <p className="text-center text-white font-normal text-xs md:text-base ">
+        <p className="text-center text-white font-normal text-xs md:text-base lg:px-20">
           Explore the latest gadgets that will take your experience to the next
           level. From smart devices to the coolest accessories, we have it all!
         </p>
