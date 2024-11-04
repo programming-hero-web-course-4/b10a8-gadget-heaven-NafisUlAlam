@@ -1,7 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 import { IoCart } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
-const Navbar = () => {
+import PropTypes from "prop-types";
+const Navbar = ({ cart, wish }) => {
   return (
     <div className="navbar bg-[#9538E2] text-white">
       <div className="navbar-start">
@@ -55,15 +56,28 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end gap-4">
-        <a className="btn w-12 h-12 rounded-full bg-white flex items-center justify-center">
-          <IoCart size={25} color="black" />
-        </a>
-        <a className="btn  w-12 h-12 rounded-full bg-white flex items-center justify-center">
-          <FaHeart size={25} color="black" />
-        </a>
+        <div>
+          <a className="btn w-12 h-12 rounded-full bg-white flex items-center justify-center">
+            <IoCart size={25} color="black" />
+          </a>
+          <div className="badge badge-outline">{cart.length}</div>
+        </div>
+
+        <div>
+          <a className="btn  w-12 h-12 rounded-full bg-white flex items-center justify-center">
+            <FaHeart size={25} color="black" />
+          </a>
+
+          <div className="badge badge-outline">{wish.length}</div>
+        </div>
       </div>
     </div>
   );
+};
+
+Navbar.propTypes = {
+  cart: PropTypes.array,
+  wish: PropTypes.array,
 };
 
 export default Navbar;

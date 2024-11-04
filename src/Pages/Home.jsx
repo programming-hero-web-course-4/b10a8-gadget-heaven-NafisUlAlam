@@ -1,9 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
 import Banner from "./../Components/Banner";
 import BannerImg from "./../Components/BannerImg";
 import Sidebar from "./../Components/Sidebar";
-import Products from "./../Components/Products";
+
 import { Outlet } from "react-router-dom";
 
 const Home = () => {
