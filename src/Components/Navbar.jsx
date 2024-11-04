@@ -1,10 +1,16 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { IoCart } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
 import PropTypes from "prop-types";
 const Navbar = ({ cart, wish }) => {
+  const { pathname } = useLocation();
+  //console.log(pathname);
   return (
-    <div className="navbar bg-[#9538E2] text-white">
+    <div
+      className={`navbar ${
+        pathname === "/" ? "bg-[#9538E2] text-white" : "bg-white text-black"
+      }`}
+    >
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

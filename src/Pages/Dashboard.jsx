@@ -1,10 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
 import { NavLink, Outlet } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Dashboard = () => {
   return (
     <div>
+      <Helmet>
+        <title>Dashboard || Gadget BD</title>
+      </Helmet>
       <div className="bg-[#9538E2] pb-4 lg:pt-12">
         <h2 className="text-center text-white font-bold text-lg md:text-xl lg:text-3xl mb-4">
           Dashboard
@@ -14,13 +16,23 @@ const Dashboard = () => {
           level. From smart devices to the coolest accessories, we have it all!
         </p>
         <div className="lg:mt-20 flex justify-center gap-4">
-          <NavLink to="cart">
-            <button className="px-10 py-2 font-bold rounded-full bg-slate-400 hover:bg-white">
+          <NavLink
+            to="cart"
+            className={({ isActive }) =>
+              isActive ? "bg-white rounded-full" : "text-white"
+            }
+          >
+            <button className="px-10 py-2 font-bold rounded-full hover:bg-white hover:text-black">
               Cart
             </button>
           </NavLink>
-          <NavLink to="wishlist">
-            <button className="px-10 py-2 font-bold rounded-full bg-slate-400 hover:bg-white">
+          <NavLink
+            to="wishlist"
+            className={({ isActive }) =>
+              isActive ? "bg-white rounded-full" : "text-white"
+            }
+          >
+            <button className="px-10 py-2 font-bold rounded-full hover:bg-white hover:text-black">
               Wishlist
             </button>
           </NavLink>

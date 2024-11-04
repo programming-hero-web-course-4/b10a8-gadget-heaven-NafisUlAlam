@@ -4,6 +4,7 @@ import { IoCart } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { getStorage } from "../utils";
+import { Helmet } from "react-helmet";
 
 const ProductDetails = () => {
   const { productId } = useParams();
@@ -40,8 +41,11 @@ const ProductDetails = () => {
     setIsWished(true);
   };
   return (
-    <div>
-      <div className="bg-[#9538E2] lg:pb-40 lg:pt-12">
+    <div className="relative">
+      <Helmet>
+        <title>Product Details</title>
+      </Helmet>
+      <div className="bg-[#9538E2] md:pb-40 md:pt-12">
         <h2 className="text-center text-white font-bold text-lg md:text-xl lg:text-3xl mb-4">
           Product Details
         </h2>
@@ -50,57 +54,60 @@ const ProductDetails = () => {
           level. From smart devices to the coolest accessories, we have it all!
         </p>
       </div>
-      <div className="card lg:card-side bg-base-100 shadow-xl gap-4 lg:w-[80%] mb-12">
-        <figure className="w-1/2">
+      <div className="card md:card-side bg-base-100 shadow-xl gap-4 md:w-[90%]  absolute top-[350px] md:top-[150px] lg:top-[180px] left-[5%] z-[1] h-auto">
+        <figure className="w-1/2 h-40 md:h-auto">
           <img src={product_image} alt={product_title} />
         </figure>
         <div className="card-body">
-          <h2 className="font-bold text-lg md:text-xl lg:text-2xl">
-            {product_title}
-          </h2>
-          <h3 className="font-bold text-base md:text-lg lg:text-xl">
-            Price : ${price}
-          </h3>
-          <h3 className={availability ? "text-green-500" : "text-red-500"}>
+          <h2 className="font-bold text-lg  lg:text-2xl">{product_title}</h2>
+          <h3 className="font-bold text-base  lg:text-xl">Price : ${price}</h3>
+          <h3
+            className={`text-xs ${
+              availability ? "text-green-500" : "text-red-500"
+            }`}
+          >
             {availability ? "In stock" : "Out of stock"}
           </h3>
           <h3>{description}</h3>
-          <h3 className="font-bold text-base md:text-lg lg:text-xl">
-            Specification:
-          </h3>
+          <h3 className="font-bold text-base  lg:text-xl">Specification:</h3>
           <ol>
             {specification &&
               specification.map((str, id) => (
-                <li key={id} className="text-xs md:text-base text-[#09080F]/60">
+                <li
+                  key={id}
+                  className="text-[14px] lg:text-lg text-[#09080F]/60"
+                >
                   {id + 1}. {str}
                 </li>
               ))}
           </ol>
 
-          <h3 className="font-bold text-base md:text-lg lg:text-xl">Rating </h3>
+          <h3 className="font-bold text-base  lg:text-xl">Rating </h3>
           <div className="flex gap-12 items-center">
-            <div className="font-bold text-base md:text-lg lg:text-xl">
+            <div className="font-bold text-base lg:text-xl">
               <Rating rating={rating}></Rating>
             </div>
-            <h2 className="font-bold text-base btn px-4 py-2">{rating}</h2>
+            <div className="w-max py-1 px-4 rounded-full bg-slate-200">
+              <h2 className="font-bold text-sm ">{rating}</h2>
+            </div>
           </div>
 
-          <div className="flex items-center gap-12 mt-5">
+          <div className="flex items-center gap-12 mt-4">
             <button
               onClick={() => handleAdd("c", prod)}
               className="flex items-center gap-2 bg-[#9538E2] text-white px-4 py-2 rounded-full btn"
             >
-              Add to cart <IoCart size={16} color="white" />
+              Add to cart <IoCart size={14} color="white" />
             </button>
             <button
-              className="btn btn-outline"
+              className="btn  px-4 py-2 rounded-full bg-slate-200 w-auto h-auto min-h-0"
               onClick={() => {
                 handleAdd("w", prod);
                 handleClick();
               }}
               disabled={isWished}
             >
-              <FaHeart size={16} color="red" />
+              <FaHeart size={14} color="red" />
             </button>
           </div>
         </div>

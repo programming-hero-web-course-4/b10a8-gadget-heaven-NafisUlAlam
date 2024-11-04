@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import Banner from "./../Components/Banner";
 import BannerImg from "./../Components/BannerImg";
 import Sidebar from "./../Components/Sidebar";
@@ -7,6 +8,9 @@ import { Outlet } from "react-router-dom";
 const Home = () => {
   return (
     <div className="relative">
+      <Helmet>
+        <title>Gadgets BD</title>
+      </Helmet>
       <Banner></Banner>
       <BannerImg></BannerImg>
       {/* sidebar */}

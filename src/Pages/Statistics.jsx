@@ -1,8 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
 
 const Statistics = () => {
-  return <div>Stats</div>;
+  return (
+    <div>
+      <Helmet>
+        <title>Stats || Gadgets BD</title>
+      </Helmet>
+      Stats
+    </div>
+  );
 };
 
 Statistics.propTypes = {};

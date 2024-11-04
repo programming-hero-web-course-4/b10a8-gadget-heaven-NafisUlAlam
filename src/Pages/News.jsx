@@ -1,6 +1,11 @@
+import { Helmet } from "react-helmet";
+
 const News = () => {
   return (
     <div className="my-6">
+      <Helmet>
+        <title>News || Gadgets BD</title>
+      </Helmet>
       <div className="card space-y-4 p-4 border-2 rounded-lg mb-4">
         <img
           src="https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-16.png"
