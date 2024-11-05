@@ -20,7 +20,7 @@ const ErrorPage = () => {
         </h2>
         <div className="text-center">
           <button
-            className="btn py-4 px-6 h-auto rounded-full font-bold mt-8 bg-[#9538E2] text-white min-h-0"
+            className="btn py-4 px-6 h-auto rounded-full font-bold mt-8 bg-[#9538E2] hover:bg-[#7a21c3] text-white min-h-0"
             onClick={() => navigate("/")}
           >
             Back to Home
