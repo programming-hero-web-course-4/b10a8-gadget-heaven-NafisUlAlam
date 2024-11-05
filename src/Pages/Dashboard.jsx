@@ -9,7 +9,7 @@ const Dashboard = () => {
       <Helmet>
         <title>Dashboard || Gadget BD</title>
       </Helmet>
-      <div className="bg-[#9538E2] pb-4 lg:pt-12">
+      <div className="bg-[#9538E2] pb-4 lg:pt-12 rounded-xl">
         <h2 className="text-center text-white font-bold text-lg md:text-xl lg:text-3xl mb-4">
           Dashboard
         </h2>
@@ -17,14 +17,14 @@ const Dashboard = () => {
           Explore the latest gadgets that will take your experience to the next
           level. From smart devices to the coolest accessories, we have it all!
         </p>
-        <div className="lg:mt-20 flex justify-center gap-4">
+        <div className="mt-6 md:mt-12 flex justify-center gap-4">
           <NavLink
             to="cart"
             className={({ isActive }) =>
               isActive ? "bg-white rounded-full" : "text-white"
             }
           >
-            <button className="px-10 py-2 font-bold rounded-full hover:bg-white hover:text-black">
+            <button className="px-10 py-2 font-bold rounded-full hover:bg-white hover:text-black text-xs md:text-base">
               Cart
             </button>
           </NavLink>
@@ -34,7 +34,7 @@ const Dashboard = () => {
               isActive ? "bg-white rounded-full" : "text-white"
             }
           >
-            <button className="px-10 py-2 font-bold rounded-full hover:bg-white hover:text-black">
+            <button className="px-10 py-2 font-bold rounded-full hover:bg-white hover:text-black text-xs md:text-base">
               Wishlist
             </button>
           </NavLink>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <div className=" bg-[#9538E2]  text-white pt-12 pb-20 lg:pb-40 mb-[150px] md:mb-[300px] lg:mb-[400px] 2xl:mb-[600px]">
+    <div className=" bg-[#9538E2]  text-white pt-12 pb-20 lg:pb-40 rounded-b-xl">
       <h2 className="font-bold text-xl md:text-2xl lg:text-5xl text-center mb-12">
         Upgrade Your Tech Accessorize with Gadget Heaven Accessories
       </h2>

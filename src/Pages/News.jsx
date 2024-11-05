@@ -21,7 +21,9 @@ const News = () => {
           expected to set new benchmarks in smartphone technology.
         </p>
         <div className="text-center">
-          <button className="btn btn-outline w-[120px]">Read More</button>
+          <button className="btn btn-outline w-[120px] hover:bg-[#731fb8]">
+            Read More
+          </button>
         </div>
       </div>
 
@@ -40,7 +42,9 @@ const News = () => {
           promises durability and improved multitasking features.
         </p>
         <div className="text-center">
-          <button className="btn btn-outline w-[120px]">Read More</button>
+          <button className="btn btn-outline w-[120px] hover:bg-[#731fb8]">
+            Read More
+          </button>
         </div>
       </div>
 
@@ -59,7 +63,9 @@ const News = () => {
           redefine the smart in smartphones.
         </p>
         <div className="text-center">
-          <button className="btn btn-outline w-[120px]">Read More</button>
+          <button className="btn btn-outline w-[120px] hover:bg-[#731fb8]">
+            Read More
+          </button>
         </div>
       </div>
 
@@ -78,7 +84,9 @@ const News = () => {
           design, the new XPS series is a solid choice for professionals.
         </p>
         <div className="text-center">
-          <button className="btn btn-outline w-[120px]">Read More</button>
+          <button className="btn btn-outline w-[120px] hover:bg-[#731fb8]">
+            Read More
+          </button>
         </div>
       </div>
 
@@ -97,7 +105,9 @@ const News = () => {
           them a must-have for audiophiles.
         </p>
         <div className="text-center">
-          <button className="btn btn-outline w-[120px]">Read More</button>
+          <button className="btn btn-outline w-[120px] hover:bg-[#731fb8]">
+            Read More
+          </button>
         </div>
       </div>
     </div>

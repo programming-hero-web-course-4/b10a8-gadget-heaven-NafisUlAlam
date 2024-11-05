@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet";
 const ProductDetails = () => {
   const { productId } = useParams();
   const data = useLoaderData();
-
+  //console.log(typeof productId);
   const { handleAdd } = useOutletContext();
 
   const [prod, setProd] = useState({});
@@ -45,7 +45,7 @@ const ProductDetails = () => {
       <Helmet>
         <title>Product Details</title>
       </Helmet>
-      <div className="bg-[#9538E2] pb-40 md:pt-12 ">
+      <div className="bg-[#9538E2] pb-40 md:pt-12 rounded-xl ">
         <h2 className="text-center text-white font-bold text-lg md:text-xl lg:text-3xl mb-4">
           Product Details
         </h2>
@@ -95,19 +95,19 @@ const ProductDetails = () => {
           <div className="flex items-center gap-12 mt-4">
             <button
               onClick={() => handleAdd("c", prod)}
-              className="flex items-center gap-2 bg-[#9538E2] text-white px-4 py-2 rounded-full btn"
+              className="flex items-center gap-2 bg-[#9538E2] hover:bg-[#731fb8] text-white px-4 py-2 rounded-full btn"
             >
               Add to cart <IoCart size={14} color="white" />
             </button>
             <button
-              className="btn  px-4 py-2 rounded-full bg-slate-200 w-auto h-auto min-h-0"
+              className="btn btn-outline px-4 py-2 rounded-full  w-auto h-auto min-h-0"
               onClick={() => {
                 handleAdd("w", prod);
                 handleClick();
               }}
               disabled={isWished}
             >
-              <FaHeart size={14} color="red" />
+              <FaHeart size={16} color="red" />
             </button>
           </div>
         </div>

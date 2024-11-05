@@ -2,13 +2,21 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { IoCart } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
 import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
 const Navbar = ({ cart, wish }) => {
   const { pathname } = useLocation();
   //console.log(pathname);
+  const [isTrue, setIstrue] = useState(true);
+
+  useEffect(() => {
+    if (pathname === "/" || pathname.split("/")[1] === "category")
+      setIstrue(true);
+    else setIstrue(false);
+  }, [pathname]);
   return (
     <div
-      className={`navbar ${
-        pathname === "/" ? "bg-[#9538E2] text-white" : "bg-white text-black"
+      className={`navbar sticky top-0 z-10 ${
+        isTrue ? "bg-[#9538E2] text-white" : "bg-white text-black"
       }`}
     >
       <div className="navbar-start">
@@ -68,20 +76,40 @@ const Navbar = ({ cart, wish }) => {
         </ul>
       </div>
       <div className="navbar-end gap-4">
-        <div>
-          <a className="btn w-12 h-12 rounded-full bg-white flex items-center justify-center">
-            <IoCart size={25} color="black" />
+        <div className="relative">
+          <a
+            className={`${
+              isTrue ? "bg-white" : "bg-slate-200"
+            } btn w-12 h-12 rounded-full  flex items-center justify-center `}
+          >
+            {/* btn w-12 h-12 rounded-full bg-white flex items-center justify-center */}
+            <IoCart size={16} color="black" />
           </a>
-          <div className="badge badge-outline">{cart.length}</div>
         </div>
 
-        <div>
-          <a className="btn  w-12 h-12 rounded-full bg-white flex items-center justify-center">
-            <FaHeart size={25} color="black" />
-          </a>
-
-          <div className="badge badge-outline">{wish.length}</div>
+        <div
+          className={`${
+            isTrue ? "bg-white" : "bg-slate-200"
+          } btn w-12 h-12 rounded-full  flex items-center justify-center `}
+        >
+          <FaHeart size={16} color="black" />
         </div>
+      </div>
+
+      <div
+        className={`${
+          isTrue ? "text-white" : "text-black"
+        } font-bold  relative mt-[-50px] ml-[-70px] `}
+      >
+        {cart.length}
+      </div>
+
+      <div
+        className={`${
+          isTrue ? "text-white" : "text-black"
+        } font-bold  relative mt-[-50px] ml-[55px] `}
+      >
+        {wish.length}
       </div>
     </div>
   );

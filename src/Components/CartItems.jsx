@@ -48,14 +48,19 @@ const CartItems = () => {
     <div>
       <Modal></Modal>
       <div className="flex justify-between gap-4 my-8 items-center">
-        <h2 className="mr-auto font-bold">Cart</h2>
+        <h2 className="mr-auto font-bold text-base md:text-xl lg:text-3xl">
+          Cart
+        </h2>
         <p className="font-bold">Total Cost : {price}</p>
-        <button className="btn btn-outline" onClick={() => handleSort()}>
+        <button
+          className="btn btn-outline hover:bg-[#731fb8]"
+          onClick={() => handleSort()}
+        >
           Sort By Price
         </button>
         <button
           disabled={isDisabled}
-          className="btn btn-outline"
+          className="btn btn-outline hover:bg-[#731fb8]"
           onClick={() => {
             handlePurchase();
           }}
@@ -71,7 +76,7 @@ const CartItems = () => {
             </CartItem>
           ))
         ) : (
-          <Nothing></Nothing>
+          <Nothing title={"cart"}></Nothing>
         )}
       </div>
     </div>

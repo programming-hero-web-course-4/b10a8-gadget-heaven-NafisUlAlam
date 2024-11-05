@@ -10,7 +10,9 @@ const WishItems = () => {
   return (
     <div>
       <div className="flex justify-between gap-4 my-8 items-center">
-        <h2 className="mr-auto font-bold">Wishlist</h2>
+        <h2 className="mr-auto font-bold text-base md:text-xl lg:text-3xl">
+          Wishlist
+        </h2>
       </div>
       <div>
         {cart.length ? (
@@ -20,7 +22,7 @@ const WishItems = () => {
             </WishItem>
           ))
         ) : (
-          <Nothing></Nothing>
+          <Nothing title={"wish"}></Nothing>
         )}
       </div>
     </div>

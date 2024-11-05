@@ -14,8 +14,11 @@ const Modal = () => {
           <div className="modal-action justify-center">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
-              <button className="btn" onClick={() => navigate("/")}>
-                Close
+              <button
+                className="btn btn-outline hover:bg-[#731fb8]"
+                onClick={() => navigate("/")}
+              >
+                Back to Home
               </button>
             </form>
           </div>
