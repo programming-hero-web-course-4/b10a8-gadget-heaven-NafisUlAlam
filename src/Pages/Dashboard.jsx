@@ -1,7 +1,9 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useOutletContext } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 const Dashboard = () => {
+  const { setCart } = useOutletContext();
+  //console.log(setCart);
   return (
     <div>
       <Helmet>
@@ -38,7 +40,7 @@ const Dashboard = () => {
           </NavLink>
         </div>
       </div>
-      <Outlet></Outlet>
+      <Outlet context={{ setCart }}></Outlet>
     </div>
   );
 };

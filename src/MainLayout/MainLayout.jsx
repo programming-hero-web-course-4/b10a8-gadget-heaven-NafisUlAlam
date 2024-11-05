@@ -30,7 +30,7 @@ const MainLayout = () => {
       <Navbar cart={cart} wish={wish}></Navbar>
 
       <div className="min-h-screen">
-        <Outlet context={{ handleAdd }}></Outlet>
+        <Outlet context={{ handleAdd, setCart }}></Outlet>
       </div>
 
       <Footer></Footer>

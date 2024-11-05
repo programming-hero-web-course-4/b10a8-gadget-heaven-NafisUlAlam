@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
-import { getStorage } from "../utils";
+import { delStorage, getStorage } from "../utils";
 import Nothing from "./Nothing";
 import CartItem from "./CartItem";
+import Modal from "./Modal";
+import { useOutletContext } from "react-router-dom";
 
 const CartItems = () => {
+  const { setCart } = useOutletContext();
+  //console.log(setCart);
+
   const cart = getStorage("c");
   //console.log(cart);
 
@@ -22,15 +27,41 @@ const CartItems = () => {
     setArr(newArr);
   };
   //console.log(arr, cart);
+
+  const [isDisabled, setIsDisabled] = useState(false);
+  useEffect(() => {
+    if (arr.length === 0) setIsDisabled(true);
+    else setIsDisabled(false);
+  }, [arr.length]);
+
+  const handlePurchase = () => {
+    //console.log("button clicked");
+    document.getElementById("my_modal_5").showModal();
+    delStorage("c");
+    const cart = getStorage("c");
+    setArr(cart);
+    setPrice(0);
+    setIsDisabled(true);
+    setCart([]);
+  };
   return (
     <div>
+      <Modal></Modal>
       <div className="flex justify-between gap-4 my-8 items-center">
         <h2 className="mr-auto font-bold">Cart</h2>
         <p className="font-bold">Total Cost : {price}</p>
         <button className="btn btn-outline" onClick={() => handleSort()}>
           Sort By Price
         </button>
-        <button className="btn btn-outline">Purchase</button>
+        <button
+          disabled={isDisabled}
+          className="btn btn-outline"
+          onClick={() => {
+            handlePurchase();
+          }}
+        >
+          Purchase
+        </button>
       </div>
       <div>
         {arr.length ? (

@@ -28,3 +28,7 @@ export const addToStorage = (str, product) => {
   else localStorage.setItem("cart", JSON.stringify(storage));
   toast.success(`successfully added to ${str === "w" ? "Wishlist" : "Cart"}!`);
 };
+
+export const delStorage = (str) => {
+  if (str === "c") localStorage.removeItem("cart");
+};

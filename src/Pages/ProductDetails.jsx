@@ -45,7 +45,7 @@ const ProductDetails = () => {
       <Helmet>
         <title>Product Details</title>
       </Helmet>
-      <div className="bg-[#9538E2] md:pb-40 md:pt-12">
+      <div className="bg-[#9538E2] pb-40 md:pt-12 ">
         <h2 className="text-center text-white font-bold text-lg md:text-xl lg:text-3xl mb-4">
           Product Details
         </h2>
@@ -54,8 +54,8 @@ const ProductDetails = () => {
           level. From smart devices to the coolest accessories, we have it all!
         </p>
       </div>
-      <div className="card md:card-side bg-base-100 shadow-xl gap-4 md:w-[90%]  absolute top-[350px] md:top-[150px] lg:top-[180px] left-[5%] z-[1] h-auto">
-        <figure className="w-1/2 h-40 md:h-auto">
+      <div className="card md:card-side bg-base-100 shadow-xl gap-4 md:w-[90%] relative mt-[-120px] md:left-[5%] mb-12">
+        <figure className="w-1/2 h-20 md:h-auto">
           <img src={product_image} alt={product_title} />
         </figure>
         <div className="card-body">
