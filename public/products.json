@@ -113,15 +113,15 @@
   },
   {
     "product_id": "P008",
-    "product_title": "Wooden Coffee Table",
-    "product_image": "https://i.ibb.co.com/pLhG5QH/AR-SN-CZ.jpg",
+    "product_title": "MeeTion MT-CHR16 Cute Pink Racing E-Sport Gaming Chair",
+    "product_image": "https://i.ibb.co.com/RTK9DZ9/mt-chr16-01-500x500.jpg",
     "category": "Furniture",
     "price": 129.99,
-    "description": "Stylish wooden coffee table with sturdy construction and a modern design.",
+    "description": "Stylish Gaming chair intended for female gamers with a modern design.",
     "specification": [
-      "Solid wood",
+      "Curved neck support headrest",
       "Modern design",
-      "Easy to assemble",
+      "2D swivel armrest",
       "Durable finish"
     ],
     "availability": true,
@@ -129,32 +129,32 @@
   },
   {
     "product_id": "P009",
-    "product_title": "Leather Recliner Sofa",
-    "product_image": "https://i.ibb.co.com/8rpB75J/664051e7ad6acd0b1f5e0be6-caberryne-3-pieces-leather-recliner-sofa.jpg",
+    "product_title": "Gamemax GCR07 Gaming Chair Blue",
+    "product_image": "https://i.ibb.co.com/j8V3kk7/gcr07-blue-1-500x500.jpg",
     "category": "Furniture",
     "price": 299.99,
-    "description": "Luxurious leather recliner sofa with a comfortable seat and easy reclining mechanism.",
+    "description": "Luxurious Gaming Chair with a comfortable seat and easy reclining mechanism.",
     "specification": [
       "Premium leather",
       "Recliner mechanism",
-      "Foam padding",
-      "Spacious seating"
+      "100% vegan PU artificial leather cover",
+      "Safety class 4 gas lift"
     ],
     "availability": false,
     "rating": 4.6
   },
   {
     "product_id": "P010",
-    "product_title": "Stainless Steel Cookware Set",
-    "product_image": "https://i.ibb.co.com/dgSz91r/images-q-tbn-ANd9-Gc-Ro-SPTt-FVMK0p-LZWMygm-L26go-XNu5-FDVIgkw-s.jpg",
+    "product_title": "Thermomix TM6",
+    "product_image": "https://i.ibb.co.com/rQ8vFyP/7376f6d3-7dcd-4039-b6d2-d44db0410063-1-e5b3544f-2b0f-4d77-b29c-69fbfa65adf8.jpg",
     "category": "Home & Kitchen",
-    "price": 89.99,
-    "description": "Complete stainless steel cookware set with pots, pans, and lids for versatile cooking.",
+    "price": 289.99,
+    "description": "Combines the functionalities of more than 20 kitchen devices, acting as a smart, automated sous chef.",
     "specification": [
-      "8-piece set",
-      "Stainless steel",
+      "6.8-inch color touchscreen",
+      "Integrated scale with 1-gram accuracy",
       "Oven-safe up to 500°F",
-      "Dishwasher-safe"
+      "Around 7.95 kg (17.5 lbs)."
     ],
     "availability": true,
     "rating": 4.5
