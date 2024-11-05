@@ -1,9 +1,23 @@
-import { NavLink, Outlet, useOutletContext } from "react-router-dom";
+import {
+  NavLink,
+  Outlet,
+  useLocation,
+  useOutletContext,
+} from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useEffect, useState } from "react";
 
 const Dashboard = () => {
   const { setCart } = useOutletContext();
+  const { pathname } = useLocation();
   //console.log(setCart);
+  const [isTrue, setIsTrue] = useState(true);
+  useEffect(() => {
+    if (pathname === "/dashboard" || pathname === "/dashboard/cart")
+      setIsTrue(true);
+    else setIsTrue(false);
+  }, [pathname]);
+
   return (
     <div>
       <Helmet>
@@ -20,9 +34,7 @@ const Dashboard = () => {
         <div className="mt-6 md:mt-12 flex justify-center gap-4">
           <NavLink
             to="cart"
-            className={({ isActive }) =>
-              isActive ? "bg-white rounded-full" : "text-white"
-            }
+            className={isTrue ? "bg-white rounded-full" : "text-white"}
           >
             <button className="px-10 py-2 font-bold rounded-full hover:bg-white hover:text-black text-xs md:text-base">
               Cart
