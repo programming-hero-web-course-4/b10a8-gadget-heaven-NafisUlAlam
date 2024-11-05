@@ -12,7 +12,7 @@ const Banner = () => {
       </p>
       <div className="text-center mb-12">
         <Link to="/dashboard">
-          <button className="btn h-auto font-bold bg-white text-[#9538E2] rounded-full px-6 py-3">
+          <button className="btn h-auto font-bold bg-white text-[#9538E2] hover:bg-[#9538E2] hover:text-white  rounded-full px-6 py-3">
             Shop Now
           </button>
         </Link>
