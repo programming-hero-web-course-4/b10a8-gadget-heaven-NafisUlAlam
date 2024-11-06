@@ -13,6 +13,11 @@ const Nothing = ({ title }) => {
       "https://i.ibb.co.com/wZHk0jJ/vector-illustration-wishlist-inscription-birthday-party-brush-lettering-modern-calligraphy-desirable.jpg";
     heading = "Your wishlist is Empty!!!";
     subheading = "Please add some Products to your wishlist.";
+  } else if (str === "stats") {
+    src =
+      "https://i.ibb.co.com/wZHk0jJ/vector-illustration-wishlist-inscription-birthday-party-brush-lettering-modern-calligraphy-desirable.jpg";
+    heading = "We are working on the stat page!!!";
+    subheading = "Please wait patiently...";
   } else {
     src = "https://i.ibb.co.com/WD1gqk4/stock-out-icon-256x256-2ltyhmsg.png";
     heading = `Sorry we are currently Stocked out on ${str}`;

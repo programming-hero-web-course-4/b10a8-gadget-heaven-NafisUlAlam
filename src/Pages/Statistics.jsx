@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import Nothing from "./../Components/Nothing";
 
 const Statistics = () => {
   return (
@@ -6,7 +7,9 @@ const Statistics = () => {
       <Helmet>
         <title>Stats || Gadgets BD</title>
       </Helmet>
-      Stats
+      <div className="min-h-screen">
+        <Nothing title={"stats"}></Nothing>
+      </div>
     </div>
   );
 };

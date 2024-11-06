@@ -21,24 +21,24 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("/categories.json"),
+        loader: () => fetch("/categories2.json"),
         children: [
           {
             path: "/",
             element: <Products></Products>,
-            loader: () => fetch("/products.json"),
+            loader: () => fetch("/products2.json"),
           },
           {
             path: "/category/:categoryId",
             element: <Products></Products>,
-            loader: () => fetch("/products.json"),
+            loader: () => fetch("/products2.json"),
           },
         ],
       },
       {
         path: "/product/:productId",
         element: <ProductDetails></ProductDetails>,
-        loader: () => fetch("/products.json"),
+        loader: () => fetch("/products2.json"),
       },
       {
         path: "/statistics",

@@ -53,14 +53,14 @@ const CartItems = () => {
         </h2>
         <p className="font-bold">Total Cost : {price}</p>
         <button
-          className="btn btn-outline hover:bg-[#731fb8]"
+          className="btn btn-outline hover:bg-[#731fb8] flex-shrink"
           onClick={() => handleSort()}
         >
           Sort By Price
         </button>
         <button
           disabled={isDisabled}
-          className="btn btn-outline hover:bg-[#731fb8]"
+          className="btn btn-outline hover:bg-[#731fb8] flex-shrink"
           onClick={() => {
             handlePurchase();
           }}
