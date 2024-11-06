@@ -9,7 +9,7 @@ const Product = ({ product }) => {
         <img
           src={product_image}
           alt="Shoes"
-          className="rounded-xl object-cover w-full h-full"
+          className="rounded-xl object-contain w-full h-full"
         />
       </figure>
       <div className="card-body items-center text-center gap-4">

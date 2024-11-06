@@ -55,8 +55,12 @@ const ProductDetails = () => {
         </p>
       </div>
       <div className="card md:card-side bg-base-100 shadow-xl gap-4 md:w-[90%] relative mt-[-120px] md:left-[5%] mb-12">
-        <figure className="w-1/2 h-20 md:h-auto">
-          <img src={product_image} alt={product_title} />
+        <figure className="md:w-1/2  md:h-auto">
+          <img
+            src={product_image}
+            alt={product_title}
+            className="object-contain"
+          />
         </figure>
         <div className="card-body">
           <h2 className="font-bold text-lg  lg:text-2xl">{product_title}</h2>
@@ -92,7 +96,7 @@ const ProductDetails = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-12 mt-4">
+          <div className="flex items-center  gap-12 mt-4">
             <button
               onClick={() => handleAdd("c", prod)}
               className="flex items-center gap-2 bg-[#9538E2] hover:bg-[#731fb8] text-white px-4 py-2 rounded-full btn"
