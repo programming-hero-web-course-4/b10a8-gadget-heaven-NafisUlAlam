@@ -10,8 +10,8 @@ const Sidebar = () => {
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? "bg-[#9538E2] text-white rounded-full px-4 py-2 hover:bg-[#7327b1] hover:text-white text-center shadow-lg"
-                : "bg-white text-black px-4 py-2 hover:bg-[#7327b1] hover:text-white rounded-full"
+                ? "bg-[#9538E2] text-white rounded-full px-4 py-2 hover:bg-[#7327b1] hover:text-white text-center shadow-lg outline outline-[#9538E2]"
+                : "bg-white text-black px-4 py-2 hover:bg-[#7327b1] hover:text-white rounded-full outline outline-[#9538E2]"
             }
             key={category.id}
             to={`/category/${category.name}`}
